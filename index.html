@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ff6ec4, #7873f5, #4ade80);
+      background: linear-gradient(135deg, #ff6ec4, #7873f5, #f43f5e);
       background-size: 300% 300%;
       animation: gradientBG 10s ease infinite;
       color: #fff;
@@ -50,13 +50,25 @@
       border-radius: 20px;
       padding: 30px;
       margin: 20px auto;
-      max-width: 600px;
+      max-width: 700px;
       box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: scale(1.05);
+    }
+
+    img.hot {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    img.hot:hover {
+      transform: scale(1.08);
     }
 
     footer {
@@ -70,15 +82,18 @@
 <body>
 
   <header>
-    <h1>✨ Welcome Mukesh ✨</h1>
-    <h2>Your colorful web journey starts here!</h2>
+    <h1>🔥 Welcome Mukesh 🔥</h1>
+    <h2>Your hot & colorful web journey starts here!</h2>
   </header>
 
   <div class="card">
     <p>
-      This is your personal webpage filled with colors, motion, and positive vibes.  
-      Explore, enjoy, and let your creativity shine 🌈.
+      This is your personal webpage filled with colors, motion, and hot vibes.  
+      Check out these stunning images below 🌈🔥
     </p>
+    <img class="hot" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Hot colorful sunset">
+    <img class="hot" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Hot neon city lights">
+    <img class="hot" src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4" alt="Hot abstract art">
   </div>
 
   <footer>
