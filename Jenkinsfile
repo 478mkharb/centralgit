@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''echo "this is gahmad"
 echo "my name is $NAME"
-today date is $date'''
+date'''
       }
     }
 
