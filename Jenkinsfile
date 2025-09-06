@@ -3,12 +3,14 @@ pipeline {
   stages {
     stage('print') {
       steps {
-        sh 'echo "this is gahmad"'
+        sh '''echo "this is gahmad"
+echo "my name is $NAME"
+today date is $date'''
       }
     }
 
   }
   environment {
-    NAME = 'name'
+    NAME = 'Mukesh'
   }
 }
