@@ -20,7 +20,7 @@ pipeline {
           steps {
             timestamps() {
               echo 'this is a test stage'
-              cleanWs(cleanWhenSuccess: true)
+              cleanWs()
             }
 
           }
