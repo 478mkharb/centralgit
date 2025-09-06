@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('print') {
+    stage('build') {
       steps {
         sh '''echo "this is pipelineuser"
         echo "my name is $NAME"
@@ -10,6 +10,17 @@ pipeline {
         touch file.txt
         ls -al
         pwd'''
+      }
+    }
+
+    stage('test') {
+      agent any
+      steps {
+        timestamps() {
+          echo 'this is a test stage'
+          cleanWs(cleanWhenSuccess: true)
+        }
+
       }
     }
 
