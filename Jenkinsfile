@@ -14,11 +14,23 @@ pipeline {
     }
 
     stage('test') {
-      agent any
-      steps {
-        timestamps() {
-          echo 'this is a test stage'
-          cleanWs(cleanWhenSuccess: true)
+      parallel {
+        stage('test') {
+          agent any
+          steps {
+            timestamps() {
+              echo 'this is a test stage'
+              cleanWs(cleanWhenSuccess: true)
+            }
+
+          }
+        }
+
+        stage('test2') {
+          steps {
+            sh '''df -Th
+sudo systemctl status httpd.service'''
+          }
         }
 
       }
